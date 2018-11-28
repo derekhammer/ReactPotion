@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import PotionList from "./PotionList";
+import NewPotionForm from "./NewPotionForm";
 import { Switch, Route } from 'react-router-dom';
 
 function App(){
