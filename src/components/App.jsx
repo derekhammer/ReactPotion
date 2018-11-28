@@ -1,14 +1,17 @@
 import React from "react";
 import Header from "./Header";
 import PotionList from "./PotionList";
+import { Switch, Route } from 'react-router-dom';
 
 function App(){
-  return (
+    return (
       <div>
-          <Header/>
-          <PotionList/>
+        <Header/>
+        <Switch>
+          <Route exact path='/' component={PotionList} />
+        </Switch>
       </div>
-  );
-}
+    );
+  }
 
 export default App;
