@@ -3,7 +3,8 @@ import React from "react";
 function App(){
   return (
       <div>
-          <h3>Potion Hut</h3>
+          <Header/>
+          <h3>Buy these here potions!</h3>
       </div>
   );
 }
