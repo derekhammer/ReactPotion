@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 
-function Potion(){
+function Potion(props){
     return(
         <div>
             <h3>{props.name}</h3>
