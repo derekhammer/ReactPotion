@@ -9,6 +9,7 @@ function App(){
         <Header/>
         <Switch>
           <Route exact path='/' component={PotionList} />
+          <Route path='/newpotion' component={NewPotionForm} />
         </Switch>
       </div>
     );
