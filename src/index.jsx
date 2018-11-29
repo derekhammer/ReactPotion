@@ -5,20 +5,20 @@ import { AppContainer } from 'react-hot-loader';
 import { HashRouter } from 'react-router-dom';
 
 const render = (Component) => {
-    ReactDOM.render(
-      <AppContainer>
-        <HashRouter>
-          <Component/>
-        </HashRouter>
-      </AppContainer>,
-      document.getElementById('react-app-root')
-    );
-  };
+  ReactDOM.render(
+    <AppContainer>
+      <HashRouter>
+        <Component/>
+      </HashRouter>
+    </AppContainer>,
+    document.getElementById('react-app-root')
+  );
+};
 
 render(App);
 
 if (module.hot) {
   module.hot.accept('./components/App', () => {
-    render(App)
+    render(App);
   });
 }
