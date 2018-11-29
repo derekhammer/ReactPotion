@@ -24,8 +24,14 @@ var masterPotionList = [
     name: 'Goblin Tea',
     ingredient: 'Gildroot',
     modifier: 'Luck',
-    stock: 2
-  }
+    stock: 7
+   },
+  // {
+  //   name: 'Potion of Insanity',
+  //   ingredient: 'M͏̵̰̯̩̭͈̞̪͇̝̺̥̯̮̗͍̙̲̟́͘͢à̵̶̡̮͎̬͔͓͍̹̟͉͖̻̗̫̰̘̞ͅd̨̛҉͘҉̦̜̲̞̭͍̘̟̻̪͖̙͎̯̙̩̗͉n̸̵̦͔̬͎̹̼͙͉̙͍̗͔̭͇̭͜͠ͅͅé̴̖͖̗͖͓̰̹̙̫͉͍͇͢͜s̶̢̪͇̣̱̟͖͍͔̝̼̀s̨̛̳͖̪̩͚͙͕̠̩̘̭̘̼͓̱̲͇͜͟ͅͅ',
+  //   modifier: '???',
+  //   stock: 1
+  // }
     
 ];
 

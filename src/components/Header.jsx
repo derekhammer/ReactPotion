@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 function Header(){
   return (
-    <div>
+    <div className='header'>
       <style jsx>{`
-        h1 {
-          color: red;
+        .header {
+          text-align: center;
         }
     `}</style>
       <h1>Potion Shop</h1>

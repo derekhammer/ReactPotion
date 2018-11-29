@@ -4,12 +4,20 @@ import PropTypes from 'prop-types';
 
 function Potion(props){
   return(
-    <div>
+    <div className='potions'>
+      <style jsx>{`
+        .potions {
+          border: 3px solid gray;
+          width: 400px;
+          text-align: center;
+          padding: 7px;
+          margin-top: 10px;
+        }
+    `}</style>
       <h3>{props.name}</h3>
-      <p>{props.ingredient}</p>
-      <p>{props.modifier}</p>
-      <p>{props.stock}</p>
-      <hr/>
+      <p>Ingredient: <i>{props.ingredient}</i></p>
+      <p>Stat Modified: <i>{props.modifier}</i></p>
+      <p>Current Stock: <i>{props.stock}</i></p>
     </div>
   );
 }
