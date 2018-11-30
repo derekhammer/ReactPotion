@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import PotionList from './PotionList';
-import NewPotionForm from './NewPotionForm';
+import NewPotionControl from './NewPotionControl';
 import { Switch, Route } from 'react-router-dom';
 
 function App(){
@@ -10,7 +10,7 @@ function App(){
       <Header/>
       <Switch>
         <Route exact path='/' component={PotionList} />
-        <Route path='/newpotion' component={NewPotionForm} />
+        <Route path='/newpotion' component={NewPotionControl} />
       </Switch>
     </div>
   );
