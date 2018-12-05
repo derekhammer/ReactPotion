@@ -34,6 +34,10 @@ Derek Hammer
 
 If input is too long, the potion details will overlap the borders of the cards.
 
+| Component Flow Chart|
+|-----------|
+|![alt text](./src/assets/potion.png)|
+
 ## Support
 Report any bugs to Derek Hammer at derek.hammer@gmail.com
 
