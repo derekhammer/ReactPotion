@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function NewPotionForm(){
+function NewPotionForm(props){
   let _name = null;
   let _ingredient = null;
   let _modifier = null;

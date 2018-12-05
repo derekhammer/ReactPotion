@@ -34,7 +34,7 @@ function PotionList(props){
   return(
     <div>
       <hr/>
-      {props.masterPotionList.map((potion, index) =>
+      {props.potionList.map((potion, index) =>
         <Potion name={potion.name}
           ingredient={potion.ingredient}
           modifier={potion.modifier}
