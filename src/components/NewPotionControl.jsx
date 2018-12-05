@@ -1,4 +1,5 @@
 import React from 'react';
+import NewPotionForm from './NewPotionForm';
 import ConfirmationQuestions from './ConfirmationQuestions';
 
 class NewPotionControl extends React.Component{
@@ -8,20 +9,25 @@ class NewPotionControl extends React.Component{
         this.state = {
             formVisibleOnPage: false
         };
-        this.handleClick = this.handleClick.bind(this);
+        this.handleTroubleshootingConfirmation = this.handleTroubleshootingConfirmation.bind(this);
     }
-    handleClick(){
+    handleTroubleshootingConfirmation(){
         this.setState({formVisibleOnPage: true});
-        console.log('formVisibleOnPage is currently set to:' + this.state.formVisibleOnPage);
       }
 
-    render(){
-        return(
-            <div>
-                <ConfirmationQuestions />
-            </div>
+      render(){
+        let currentlyVisibleContent = null;
+        if (this.state.formVisibleOnPage){
+          currentlyVisibleContent = <NewPotionForm />;
+        } else {
+            currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation}/>;
+          }
+        return (
+          <div>
+            {currentlyVisibleContent}
+          </div>
         );
+      }
     }
-}
 
 export default NewPotionControl;
