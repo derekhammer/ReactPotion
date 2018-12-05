@@ -31,7 +31,7 @@ class NewPotionControl extends React.Component{
       }
     }
 
-    NewTicketControl.propTypes = {
+    NewPotionControl.propTypes = {
         onNewPotionCreation: PropTypes.func
     };
 

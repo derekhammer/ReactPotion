@@ -1,5 +1,6 @@
 import React from 'react';
 import Potion from './Potion';
+import PropTypes from 'prop-types';
 
 // var masterPotionList = [
 //   {
@@ -29,11 +30,11 @@ import Potion from './Potion';
     
 // ];
 
-function PotionList(){
+function PotionList(props){
   return(
     <div>
       <hr/>
-      {masterPotionList.map((potion, index) =>
+      {props.masterPotionList.map((potion, index) =>
         <Potion name={potion.name}
           ingredient={potion.ingredient}
           modifier={potion.modifier}
@@ -45,5 +46,9 @@ function PotionList(){
     </div>
   );
 }
+
+PotionList.propTypes = {
+  potionList: PropTypes.array
+};
 
 export default PotionList;

@@ -25,9 +25,8 @@ class App extends React.Component {
       <div>
         <Header/>
         <Switch>
-          <Route exact path='/' component={PotionList} />
+          <Route exact path='/' render={()=><PotionList potionList={this.state.masterPotionList} />} />
           <Route path='/newpotion' render={()=><NewPotionControl onNewPotionCreation={this.handleAddingNewPotionToList} />} />
-          <Route component={Error404} />
         </Switch>
       </div>
     );
