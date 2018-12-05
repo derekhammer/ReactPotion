@@ -1,4 +1,5 @@
 import React from 'react';
+import ConfirmationQuestions from './ConfirmationQuestions';
 
 class NewPotionControl extends React.Component{
 
@@ -7,12 +8,17 @@ class NewPotionControl extends React.Component{
         this.state = {
             formVisibleOnPage: false
         };
+        this.handleClick = this.handleClick.bind(this);
     }
+    handleClick(){
+        this.setState({formVisibleOnPage: true});
+        console.log('formVisibleOnPage is currently set to:' + this.state.formVisibleOnPage);
+      }
 
     render(){
         return(
             <div>
-                <p>This is a test of NewPotionControl.jsx</p>
+                <ConfirmationQuestions />
             </div>
         );
     }
