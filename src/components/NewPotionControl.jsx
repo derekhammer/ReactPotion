@@ -1,6 +1,7 @@
 import React from 'react';
 import NewPotionForm from './NewPotionForm';
 import ConfirmationQuestions from './ConfirmationQuestions';
+import PropTypes from 'prop-types';
 
 class NewPotionControl extends React.Component{
 
@@ -18,7 +19,7 @@ class NewPotionControl extends React.Component{
       render(){
         let currentlyVisibleContent = null;
         if (this.state.formVisibleOnPage){
-          currentlyVisibleContent = <NewPotionForm />;
+            currentlyVisibleContent = <NewPotionForm onNewPotionCreation={this.props.onNewPotionCreation}/>;
         } else {
             currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation}/>;
           }
@@ -29,5 +30,9 @@ class NewPotionControl extends React.Component{
         );
       }
     }
+
+    NewTicketControl.propTypes = {
+        onNewPotionCreation: PropTypes.func
+    };
 
 export default NewPotionControl;

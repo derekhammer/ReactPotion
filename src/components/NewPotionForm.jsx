@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function NewPotionForm(){
   let _name = null;
@@ -8,10 +9,11 @@ function NewPotionForm(){
 
   function handleNewPotionFormSubmission(event) {
     event.preventDefault();
-    console.log(_name.value);
-    console.log(_ingredient.value);
-    console.log(_modifier.value);
-    console.log(_stock.value);
+    props.onNewPotionCreation({name: _name.value, ingredient: _ingredient.value, modifier: _modifier.value, stock: _stock.value});
+    _name.value = '';
+    _ingredient.value = '';
+    _modifier.value = '';
+    _stock.value = '';
   }
 
   return(
@@ -42,5 +44,9 @@ function NewPotionForm(){
     </div>
   );
 }
+
+NewPotionForm.propTypes = {
+  onNewPotionCreation: PropTypes.func
+};
 
 export default NewPotionForm;
