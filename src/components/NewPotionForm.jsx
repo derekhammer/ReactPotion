@@ -9,7 +9,7 @@ function NewPotionForm(props){
 
   function handleNewPotionFormSubmission(event) {
     event.preventDefault();
-    props.onNewPotionCreation({name: _name.value, ingredient: _ingredient.value, modifier: _modifier.value, stock: _stock.value});
+    props.onNewPotionCreation({name: _name.value, ingredient: _ingredient.value, modifier: _modifier.value, stock: parseInt(_stock.value)});
     _name.value = '';
     _ingredient.value = '';
     _modifier.value = '';
